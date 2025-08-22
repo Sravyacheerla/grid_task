@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: cursive;
+        font-size: 1.2rem;
+
+    }
+    .container{
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+        background: linear-gradient(to right,#041308,#0b3317);
+    }
+    .left-text{
+        flex-basis: 30%;
+    }
+    .gallery{flex-basis: 50%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,120px);
+        gap: 8px;
+
+
+    }
+    .heading{
+        font-size: 3rem;
+        color: aliceblue;
+        text-align: center;
+
+    }
+    .subheading{
+        color: aliceblue;
+        text-align:center;
+        margin-top: 10px;
+    }
+    .box{
+        background-size: cover;
+        background-position: top;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;   
+        background-color: #222;
+        background-blend-mode: hard-light;
+        transition: all 1s ease-in-out;
+    }
+    .box:hover{
+        background-color: #999;
+        background-position:bottom;
+    }
+    #row-2{
+        grid-row:span 2;
+    }
+    #col-2{
+        grid-column:span 2;
+    }
+    @media screen and (width<=940px) { 
+        .container{flex-direction: column;}
+        .gallery{
+            grid-template-rows: repeat(7,120px);
+            width: 100%;
+        }
+        .box{grid-column: span1;
+            grid-row: span;}
+        
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-text">
+            <h2 class="heading">my portfolio</h2>
+            <p class="subheading">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, tenetur!</p>
+        </div>
+    
+    <div class="gallery">
+        <div class="box" id="row-2" style="background-image: url(//plus.unsplash.com/premium_photo-1661883809211-eb59f508b3d9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2F0ZXJmYWxsfGVufDB8fDB8fHww );">waterfalls</div>
+        <div class="box" id="col-2" style="background-image: url(https://plus.unsplash.com/premium_photo-1673292293042-cafd9c8a3ab3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fHww);">leaves</div>
+        <div class="box" style="background-image: url(https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fHww);">mountains</div>
+        <div class="box" id="row-2" style="background-image: url(https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8fDB8fHww);">deer</div>
+        <div class="box" id="col-2" style="background-image: url(https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlfGVufDB8fDB8fHww);">tree</div>
+        <div class="box" style="background-image: url(https://plus.unsplash.com/premium_photo-1673697239981-389164b7b87f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlfGVufDB8fDB8fHww);">river</div>
+        <div class="box" id="col-2" style="background-image: url(https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D);">waves</div>
+    </div>
+    </div>
+</body>
+</html>
